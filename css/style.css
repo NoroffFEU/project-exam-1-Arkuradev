@@ -1,3 +1,5 @@
+@import url("variables.css");
+
 * {
   margin: 0;
   padding: 0;
@@ -6,11 +8,12 @@
 body {
   min-height: 100vh;
   font-family: Montserrat, sans-serif;
+  background-color: var(--background-color);
 }
 
 /* NAVIGATION */
 nav {
-  background-color: white;
+  background-color: var(--background-color);
   box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
 }
 .lightLogo {
@@ -36,13 +39,13 @@ nav a {
   height: 100%;
   padding: 0 30px;
   text-decoration: none;
-  color: black;
+  color: var(--dark-color);
   display: flex;
   align-items: center;
 }
 nav a:hover {
-  background-color: orange;
-  color: white;
+  background-color: var(--primary-color);
+  color: var(--background-color);
 }
 /* Mobile Navigation */
 .sideNav {
@@ -52,7 +55,7 @@ nav a:hover {
   height: 100vh;
   width: 250px;
   z-index: 999;
-  background-color: white;
+  background-color: var(--background-color);
   box-shadow: -10px 0 10px rgba(0, 0, 0, 0.2);
   display: none;
   flex-direction: column;
@@ -62,7 +65,48 @@ nav a:hover {
 .sideNav li {
   width: 100%;
 }
-
+/* Hides hamburger menu by default - will be shown on smaller screens with media query */
 .hamburger-button {
   display: none;
+}
+
+/* Footer section */
+footer {
+  background-color: var(--dark-color);
+  color: var(--background-color);
+  text-align: center;
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 0;
+}
+
+footer ul {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+}
+footer li {
+  margin: 0 15px;
+  text-decoration: none;
+  padding-bottom: 70px;
+}
+footer a {
+  text-decoration: none;
+  color: var(--background-color);
+}
+footer a:hover {
+  color: var(--primary-color);
+}
+.darkLogo {
+  width: 350px;
+  height: auto;
+  padding: 50px;
+}
+.footerP {
+  padding-bottom: 40px;
 }
