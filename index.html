@@ -11,17 +11,25 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="media/navbar.css" />
     <title>GamerBlog | Home</title>
   </head>
   <header>
     <nav>
       <ul class="sideNav">
-        <li>
-          <img
-            src="images/Lightlogo.jpg"
-            class="lightLogo"
-            alt="GamerBlog Logo on white background"
-          />
+        <li onclick="hideSideNav()">
+          <a href="#" onclick="closeSideNav()"
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="24px"
+              viewBox="0 -960 960 960"
+              width="24px"
+              fill="#000000"
+            >
+              <path
+                d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"
+              /></svg
+          ></a>
         </li>
         <li><a href="#">Home</a></li>
         <li><a href="#">Blog</a></li>
@@ -36,10 +44,24 @@
             alt="GamerBlog Logo on white background"
           />
         </li>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Blog</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Login</a></li>
+        <li><a href="#" class="hideOnMobile">Home</a></li>
+        <li><a href="#" class="hideOnMobile">Blog</a></li>
+        <li><a href="#" class="hideOnMobile">About</a></li>
+        <li><a href="#" class="hideOnMobile">Login</a></li>
+        <li class="hamburger-button" onclick="showSideNav()">
+          <a href="#"
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="24px"
+              viewBox="0 -960 960 960"
+              width="24px"
+              fill="#000000"
+            >
+              <path
+                d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"
+              /></svg
+          ></a>
+        </li>
       </ul>
     </nav>
   </header>
@@ -50,4 +72,5 @@
     Welcome to GamerBlog - A blog packed with gaming goodies Showcases cool
     gaming news and advanced tips and tricks. Rendering blog posts here
   </body>
+  <script src="js/sideNav.js"></script>
 </html>
