@@ -47,6 +47,11 @@ nav a:hover {
   background-color: var(--primary-color);
   color: var(--background-color);
 }
+
+/* Logo link hover effect hidden */
+.nav-logo-link:hover {
+  background-color: transparent;
+}
 /* Mobile Navigation */
 .sideNav {
   position: fixed;
